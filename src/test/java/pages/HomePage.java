@@ -1,4 +1,4 @@
-package screens;
+package pages;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -10,8 +10,8 @@ import utils.Driver;
 
 import java.time.Duration;
 
-public class HomeScrens {
-  public HomeScrens() {
+public class HomePage {
+  public HomePage() {
     PageFactory.initElements(
         new AppiumFieldDecorator(Driver.getAppiumDriver(), Duration.ofSeconds(30)), this);
   }
@@ -37,5 +37,9 @@ public class HomeScrens {
   @FindBy(xpath = "//button[starts-with(@id,\"login-but\")]")
   public WebElement loginButton;
 
+  @FindBy(xpath = "//div[contains(@class,\"fs-18 fw-bold mt-2 text-orange-dark\")]")
+  public WebElement loginText;
 
+  @FindBy(xpath = "//*[@class=\"fs-14 mb-3 text-gray\"]")
+  public WebElement userEmailHeader;
 }
