@@ -13,27 +13,27 @@ import utils.ConfigReader;
 import utils.Driver;
 import utils.ReusableMethods;
 
-public class LoginStepDefinitions {
-    Pages pages=new Pages();
+public class LoginStepDefinitions extends  Pages{
+
 
     @Given("User goes to url")
     public void userGoesToUrl() {
      Driver.getAppiumDriver().get("https://www.kitapyurdu.com");
     }
 
-    @When("User click to loginButton")
-    public void userClickToLoginButton() {
-        ReusableMethods.tapOn(pages.homePage().myAccountIcon);
+    @When("User click to MyAccount Icon")
+    public void userClickToMyAccountIcon() {
+        tapOn(homePage().myAccountIcon);
     }
 
     @And("User send {string} to email box")
     public void userSendToEmailBox(String email) {
-        pages.homePage().emailBox.sendKeys(ConfigReader.getProperty(email));
+       loginPage().emailBox.sendKeys(ConfigReader.getProperty(email));
     }
 
     @And("User send {string} to password box")
     public void userSendToPasswordBox(String password) {
-        pages.homePage().passwordBox.sendKeys(ConfigReader.getProperty(password),Keys.ENTER);
+        loginPage().passwordBox.sendKeys(ConfigReader.getProperty(password),Keys.ENTER);
     }
 
     @And("User click loginButton on login page")
@@ -45,9 +45,9 @@ public class LoginStepDefinitions {
 
     @Then("User see hesabim text")
     public void userSeeHesabimText() {
-        ReusableMethods.isElementPresent(pages.homePage().loginText);
+     isElementPresent(loginPage().loginText);
     System.out.println(
-        "screens.homeScreens().loginText.getText() = " + pages.homePage().loginText.getText());
+        "screens.homeScreens().loginText.getText() = " + loginPage().loginText.getText());
     }
 
     @When("User clear the cookies")
@@ -57,6 +57,6 @@ public class LoginStepDefinitions {
 
     @And("User verifies the email on the header equal with {string}")
     public void userVerifiesTheEmailOnTheHeaderEqualWith(String validEmail) {
-        Assert.assertTrue(pages.homePage().userEmailHeader.getText().contains(ConfigReader.getProperty(validEmail)));
+        Assert.assertTrue(loginPage().userEmailHeader.getText().contains(ConfigReader.getProperty(validEmail)));
     }
 }
