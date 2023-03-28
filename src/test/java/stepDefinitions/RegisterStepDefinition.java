@@ -40,8 +40,8 @@ public class RegisterStepDefinition extends Pages {
     @And("User types {string} to password box")
     public void userTypesToPasswordBox(String password) {
         if (password.equals("password")) {
-            fakePassword = getFaker().internet().password();
-            enterKeys(registerPage().passwordBox, "TEST"+fakePassword);
+            fakePassword = "TEST"+getFaker().internet().password();
+            enterKeys(registerPage().passwordBox, fakePassword);
         } else enterKeys(registerPage().passwordBox, password);
     }
 
@@ -52,13 +52,16 @@ public class RegisterStepDefinition extends Pages {
 
     @And("User click personal data privacy check box")
     public void userClickPersonalDataPrivacyCheckBox() {
-        clickElement(registerPage().admitText);
-        clickElement(registerPage().checkBox);
+        if (homePage().acceptCookiePopUp.size()!=0) {
+            jsclick(homePage().acceptCookiePopUp.get(0));
+        }
+       // clickElement(registerPage().admitText);
+        jsclick(registerPage().checkBox);
     }
 
     @And("User click Register Button")
     public void userClickRegisterButton() {
-        clickElement(registerPage().registerButton);
+      jsclick(registerPage().registerButton);
 
     }
 

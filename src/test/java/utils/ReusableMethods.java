@@ -164,13 +164,10 @@ public class ReusableMethods {
     }
     public static void jsclick(WebElement webElement){
         JavascriptExecutor js = (JavascriptExecutor) Driver.getAppiumDriver();
-        try {
-            webElement.click();
-        } catch (Exception e) {
             js.executeScript("arguments[0].scrollIntoView(true);", webElement);
             js.executeScript("arguments[0].click()", webElement);
 
-        }
+
     }
     public static String  getValueWithJs(String elementId){
         JavascriptExecutor js=(JavascriptExecutor)Driver.getAppiumDriver();

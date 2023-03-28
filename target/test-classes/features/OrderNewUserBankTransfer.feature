@@ -10,7 +10,7 @@ Feature: New User Order with Bank Transfer
     And User clicks add to basket button
     And User clicks my basket icon
     And User clicks buy icon
-    And User clicks Now Register Button
+    And User click to Register Button
     And The user fills in the information in the form with valid values
     And User click Register Button
     And User verifies Account Created message is visible

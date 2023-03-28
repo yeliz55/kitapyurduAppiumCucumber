@@ -10,7 +10,10 @@ Feature: New User Order with Bank Transfer
     And User clicks add to basket button
     And User clicks my basket icon
     And User clicks buy icon
-    And User clicks Now Register Button
+    And User click to Register Button
     And The user fills in the information in the form with valid values
     And User click Register Button
     And User verifies Account Created message is visible
+    And User cliks Add adress button
+    And User types "a name" to name box on address page
+    And User types "a last name" to last name box on address page

@@ -22,5 +22,13 @@ public class OrderPage {
     @FindBy(xpath = "//*[@class='main-sprite icon-tabbar-cart']")
     public WebElement basketIcon;
 
-}
+    @FindBy(xpath = "//a[contains(@class,'justify-content-center')]")
+    public WebElement buyIcon;
 
+
+    @FindBy(xpath = "//a[contains(@class,'btn btn-outline-orange-x-dark')]]")
+    public WebElement register;
+
+
+
+}
