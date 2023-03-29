@@ -15,5 +15,14 @@ Feature: New User Order with Bank Transfer
     And User click Register Button
     And User verifies Account Created message is visible
     And User cliks Add adress button
-    And User types "a name" to name box on address page
-    And User types "a last name" to last name box on address page
+    And User fills in Address Form valid inputs
+    Then User verifies that they have successfully added the address
+    And User cliks ok button
+    And User clicks my basket icon
+    And User clicks buy icon
+    And User clicks continue button
+    And User clicks Bank transfer radio button
+    And User clicks continue button
+    And User clicks preinformation check box
+    And User confirm order button
+    Then User verifies order created message is visible

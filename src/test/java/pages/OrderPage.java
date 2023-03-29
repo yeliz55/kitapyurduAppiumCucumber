@@ -9,26 +9,36 @@ import utils.Driver;
 import java.time.Duration;
 
 public class OrderPage {
-    public OrderPage() {
-        PageFactory.initElements(
-                new AppiumFieldDecorator(Driver.getAppiumDriver(), Duration.ofSeconds(30)), this);
-    }
-    @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11656593/wi:200/wh:true']")
-    public WebElement physicalProduct;
+  public OrderPage() {
+    PageFactory.initElements(
+        new AppiumFieldDecorator(Driver.getAppiumDriver(), Duration.ofSeconds(30)), this);
+  }
 
-    @FindBy(xpath = "//*[@id='js-add-to-cart']")
-    public WebElement addBasket;
+  @FindBy(xpath = "//*[@src='https://img.kitapyurdu.com/v1/getImage/fn:11656593/wi:200/wh:true']")
+  public WebElement physicalProduct;
 
-    @FindBy(xpath = "//*[@class='main-sprite icon-tabbar-cart']")
-    public WebElement basketIcon;
+  @FindBy(xpath = "//*[@id='js-add-to-cart']")
+  public WebElement addBasket;
 
-    @FindBy(xpath = "//a[contains(@class,'justify-content-center')]")
-    public WebElement buyIcon;
+  @FindBy(xpath = "//*[@class='main-sprite icon-tabbar-cart']")
+  public WebElement basketIcon;
 
+  @FindBy(xpath = "//a[contains(@class,'justify-content-center')]")
+  public WebElement buyIcon;
 
-    @FindBy(xpath = "//a[contains(@class,'btn btn-outline-orange-x-dark')]]")
-    public WebElement register;
+  @FindBy(xpath = "//a[contains(@class,'btn btn-outline-orange-x-dark')]]")
+  public WebElement register;
 
+  @FindBy(xpath = "//button[@id=\"continue-button\"]")
+  public WebElement continueButton;
 
+  @FindBy(xpath = "//*[@id=\"payment-method-bank-transfer\"]")
+  public WebElement bankTransferRadioBox;
+
+  @FindBy(xpath = "//div[@id=\"terms-and-condition-section\"]")
+  public WebElement checkBox;
+
+  @FindBy(xpath = "//p[contains(@class,'text-green')]")
+  public WebElement orderCreatMessage;
 
 }
