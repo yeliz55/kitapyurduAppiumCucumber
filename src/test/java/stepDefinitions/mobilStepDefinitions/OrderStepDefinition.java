@@ -115,7 +115,7 @@ public class OrderStepDefinition extends Pages {
 
     @And("User clicks preinformation check box")
     public void userClicksPreinformationCheckBox() {
-        jsclick(orderPage().checkBox);
+        jsclick(orderPage().preInformationCheckBox);
     }
 
     @And("User confirm order button")

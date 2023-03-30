@@ -35,8 +35,10 @@ public class OrderPage {
   @FindBy(xpath = "//*[@id=\"payment-method-bank-transfer\"]")
   public WebElement bankTransferRadioBox;
 
-  @FindBy(xpath = "//div[@id=\"terms-and-condition-section\"]")
-  public WebElement checkBox;
+  /*@FindBy(xpath = "//div[@id=\"terms-and-condition-section\"]")
+  public WebElement checkBox;*/
+  @FindBy(xpath = "//*[@type=\"checkbox\"]")
+  public WebElement preInformationCheckBox;
 
   @FindBy(xpath = "//p[contains(@class,'text-green')]")
   public WebElement orderCreatMessage;
