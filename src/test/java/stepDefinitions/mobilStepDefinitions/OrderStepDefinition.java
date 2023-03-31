@@ -1,4 +1,4 @@
-package stepDefinitions;
+package stepDefinitions.mobilStepDefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -6,7 +6,6 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import pages.Pages;
-import pages.RegisterPage;
 import utils.ConfigReader;
 import utils.Driver;
 

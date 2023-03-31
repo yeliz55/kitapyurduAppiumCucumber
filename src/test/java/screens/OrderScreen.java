@@ -6,11 +6,15 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
 import utils.Driver;
 
-public class HomeScreen {
-    public HomeScreen() {
+public class OrderScreen {
+    public OrderScreen() {
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getAppiumDriver()), this);
     }
 
-    @AndroidFindBy(id="com.mobisoft.kitapyurdu:id/btn_ic_header_account")
-    public MobileElement myAccount;
+    @AndroidFindBy(xpath = "(//android.widget.ImageView)[5]")
+    public MobileElement firstProduct;
+
+    @AndroidFindBy(xpath = "(//android.widget.ImageView)[14]")
+    public MobileElement myBasket;
+
 }

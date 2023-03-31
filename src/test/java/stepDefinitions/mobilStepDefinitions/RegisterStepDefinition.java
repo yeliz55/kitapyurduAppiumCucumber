@@ -1,4 +1,4 @@
-package stepDefinitions;
+package stepDefinitions.mobilStepDefinitions;
 
 import io.cucumber.java.en.And;
 import org.junit.Assert;
