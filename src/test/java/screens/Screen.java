@@ -9,6 +9,8 @@ public class Screen extends ReusableMethods {
 
   private OrderScreen orderScreen;
 
+  private AdressScreen adressScreen;
+
   public HomeScreen homeScreen() {
     if (homeScreen == null) {
       homeScreen = new HomeScreen();
@@ -35,5 +37,12 @@ public class Screen extends ReusableMethods {
       orderScreen = new OrderScreen();
     }
     return orderScreen;
+  }
+
+  public AdressScreen adressScreen() {
+    if (homeScreen == null) {
+      adressScreen = new AdressScreen();
+    }
+    return adressScreen;
   }
 }
