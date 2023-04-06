@@ -38,4 +38,12 @@ public class OrderScreen {
 
    @AndroidFindBy(id="android:id/button3")
    public MobileElement tamamButton;
+
+   @AndroidFindBy(
+      xpath = "//android.widget.FrameLayout[@content-desc=\"Ana Sayfa\"]/android.widget.ImageView")
+   public MobileElement homePageIcon;
+
+
+    @AndroidFindBy(xpath="(//android.widget.ImageView)[5]")
+    public MobileElement secondProduct;
 }

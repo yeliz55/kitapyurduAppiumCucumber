@@ -48,7 +48,7 @@ public class OrderStepDefinition extends Screen {
 
     @And("Android clicks Sepetim button")
     public void androidClicksSepetimButton() {
-        wait(5);
+        wait(10);
         tapOn(orderScreen().myBasket);
     }
 
