@@ -18,5 +18,7 @@ public class OrderTotalAmountStepDefinition extends Screen {
 
     @Then("Android confirms the total amount")
     public void androidConfirmsTheTotalAmount() {
+        Double totalPrice=0.0;
+
     }
 }

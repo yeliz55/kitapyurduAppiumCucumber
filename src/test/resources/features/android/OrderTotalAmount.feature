@@ -13,4 +13,9 @@ Feature: Order Total Amount
     When Android clicks on the second item
     And Android clicks "Sepete Ekle" with text view
     And Android clicks Sepetim button
+    And Android clicks "Satın Al" with text view
+    And Android clicks "PTT Kargo" with text view
+    And Android clicks "Devam Et" with text view
+    And Android clicks BankTransfer Radio Button
+    And Android clicks "Devam Et" with text view
     Then Android confirms the total amount

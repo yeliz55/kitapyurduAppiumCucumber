@@ -42,6 +42,7 @@ public class OrderStepDefinition extends Screen {
 
     @And("Android clicks {string} with text view")
     public void androidClicksWithTextView(String text) {
+
         wait(10);
         tapOnElementWithText(text);
     }
@@ -59,7 +60,7 @@ public class OrderStepDefinition extends Screen {
 
     @And("The Android fills in the information on the address page")
     public void theAndroidFillsInTheInformationOnTheAddressPage() {
-        wait(3);
+        wait(5);
         enterKeys(adressScreen().nameBox,registerStepDefinition.fakeName);
         enterKeys(adressScreen().lastNameBox,registerStepDefinition.fakeLastName);
 
@@ -91,7 +92,7 @@ public class OrderStepDefinition extends Screen {
     @And("Android clicks BankTransfer Radio Button")
     public void androidClicksBankTransferRadioButton() {
         wait(5);
-        if (orderScreen().tamamButton.isDisplayed()){
+        if (orderScreen().tamamButton.size()==1){
             tapOnButtonWithText("Tamam");
             tapOn(orderScreen().radioButton);
         }else  tapOn(orderScreen().radioButton);
