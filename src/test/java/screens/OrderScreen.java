@@ -48,16 +48,18 @@ public class OrderScreen {
     @AndroidFindBy(xpath="(//android.widget.ImageView)[5]")
     public MobileElement secondProduct;
 
+    @AndroidFindBy(xpath="(//android.widget.ImageView)[6]")
+    public MobileElement thirdProduct;
     @AndroidFindBy(id="com.mobisoft.kitapyurdu:id/textViewTotalPrice")
     public List<MobileElement> priceProduct;
 
-    @AndroidFindBy(xpath="(//android.widget.TextView)[12]")
-    public List<MobileElement> subTotal;
+    @AndroidFindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.RelativeLayout[2]/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.LinearLayout[2]/android.widget.TextView")
+    public MobileElement subTotal;
 
-    @AndroidFindBy(xpath="(//android.widget.TextView)[16]")
-    public List<MobileElement> shippingCost;
+    @AndroidFindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.RelativeLayout[2]/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]/android.widget.LinearLayout[2]/android.widget.TextView[2]")
+    public MobileElement shippingCost;
 
     @AndroidFindBy(id="com.mobisoft.kitapyurdu:id/textViewTotal")
-    public List<MobileElement> totalAmount;
+    public MobileElement totalAmount;
 
 }

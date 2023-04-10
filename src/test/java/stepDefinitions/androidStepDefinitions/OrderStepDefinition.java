@@ -117,4 +117,5 @@ public class OrderStepDefinition extends Screen {
        Assert.assertTrue(orderScreen().messageTextVerifies.getText().contains("siparişiniz başarıyla tamamlandı!"));
     }
 
+
 }
